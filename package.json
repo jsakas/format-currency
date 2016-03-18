@@ -1,6 +1,6 @@
 {
   "name": "format-currency",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Format strings or numbers to currency strings.",
   "main": "index.js",
   "files": [
