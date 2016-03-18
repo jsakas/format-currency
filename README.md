@@ -34,8 +34,10 @@ Usage
 - `value`: Value to convert. Will pass through [parse-num](https://github.com/ExodusMovement/parse-num) first.
 Will coerce anything to a number.
 - `options`: *optional* `object` parameter to specify [options](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat).
-Appending `Digits` is not necessary. You can also shorten `maximum` to `max` and `minimum` to `min`. Adds one more option `nanZero`, which when the number is
-`NaN`, if it should be coerced to `0` - defaults to `true` i.e. `NaN => '0'`. Also available `code`, `symbol`, `format`.
+Appending `Digits` is not necessary. You can also shorten `maximum` to `max` and `minimum` to `min`.
+  - `nanZero`: Return `"NaN"` if can't parse to a number and this is `false` otherwise returns `"0"`. Defaults to `true` (returns `"0"`)
+  - `code`: Currency code. Example `"USD"`, `"BTC"`
+  - `symbol`: Currency symbol.
 
 **Returns:**
 
