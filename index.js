@@ -1,4 +1,3 @@
-const assert = require('assert')
 const formatNumber = require('format-num')
 
 const defaultOptions = {
@@ -13,7 +12,10 @@ const defaultOptions = {
 
 function formatCurrency (amount, opts) {
   opts = Object.assign({}, defaultOptions, opts)
-  assert(opts.format.includes('%v'), 'Must have "%v" in `format` options.')
+
+  if (!opts.format.includes('%v')) {
+    throw new Error('Must have "%v" in `format` options.');
+  }
 
   amount = formatNumber(amount, opts)
 
